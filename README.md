@@ -3,7 +3,7 @@ The project contains a "Hello world" example how to distribute n-processes on to
 
 The implementation uses MR with hadoop streaming.
 
-It could be helpful if you have data parallelism in your task.
+It could be helpful if you have task parallelism in your application.
 Then you can split your data on "buckets" and run the same task but with only one "bucket" to process.
 
 # How to use
@@ -26,5 +26,5 @@ Especially check that `HADOOP_STREAMING_JAR_PATH` exists on your edge node
 
 # Applying for your own needs.
 1. Add your custom logic into `./bin/reducer.sh` (see a comment there)
-2. Change env.sh (N_TASKS, TASK_MEMORY_MB, QUEUE, etc.).
+2. Change `env.sh` (N_TASKS, TASK_MEMORY_MB, QUEUE, etc.).
 
